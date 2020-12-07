@@ -13,6 +13,7 @@
 		F1C951C625756D720018012B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C951C425756D720018012B /* LaunchScreen.storyboard */; };
 		F1C951D125756DA00018012B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C951D025756DA00018012B /* StartViewController.swift */; };
 		F1C951D5257578420018012B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C951D4257578420018012B /* MainViewController.swift */; };
+		F1CAF122257E5451002A09E6 /* CustomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CAF121257E5451002A09E6 /* CustomElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F1C951C725756D720018012B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C951D025756DA00018012B /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		F1C951D4257578420018012B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F1CAF121257E5451002A09E6 /* CustomElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				F1C951B925756D710018012B /* AppDelegate.swift */,
 				F1C951D025756DA00018012B /* StartViewController.swift */,
+				F1CAF121257E5451002A09E6 /* CustomElements.swift */,
 				F1C951D4257578420018012B /* MainViewController.swift */,
 				F1C951BB25756D710018012B /* SceneDelegate.swift */,
 				F1C951C225756D720018012B /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 				F1C951BC25756D710018012B /* SceneDelegate.swift in Sources */,
 				F1C951D125756DA00018012B /* StartViewController.swift in Sources */,
 				F1C951D5257578420018012B /* MainViewController.swift in Sources */,
+				F1CAF122257E5451002A09E6 /* CustomElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

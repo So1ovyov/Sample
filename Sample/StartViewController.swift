@@ -30,57 +30,10 @@ class StartViewController: UIViewController {
         return label
     }()
     
-    let surnameTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = .white
-        textField.layer.cornerRadius = 4
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
-        textField.leftViewMode = .always
-        textField.placeholder = "Фамилия"
-        return textField
-    }()
-    
-    let nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = .white
-        textField.layer.cornerRadius = 4
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
-        textField.leftViewMode = .always
-        textField.placeholder = "Имя"
-        return textField
-    }()
-    
-    let middleNameTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = .white
-        textField.layer.cornerRadius = 4
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
-        textField.leftViewMode = .always
-        textField.placeholder = "Отчество"
-        return textField
-    }()
-    
-    let celebrationTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = .white
-        textField.layer.cornerRadius = 4
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
-        textField.leftViewMode = .always
-        textField.placeholder = "Праздник"
-        return textField
-    }()
+    let surnameTextField = CustomTextField()
+    let nameTextField = CustomTextField()
+    let middleNameTextField = CustomTextField()
+    let celebrationTextField = CustomTextField()
     
     let writeDownButton: UIButton = {
         let button = UIButton()
@@ -100,6 +53,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.8958405852, green: 0.8137683272, blue: 0.6871850491, alpha: 1)
         writeDownButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        setupTextField()
         setupConstraints()
     }
     
@@ -123,6 +77,13 @@ class StartViewController: UIViewController {
         
         mainVC.textLabel.text = "Дорогой наш именинник \(surnameTF) \(nameTF) \(middleTF) в этот \(celebrationTF) поздравляем тебя !!! Желаем всего самого светлого, доброго и хорошего. Пусть все мечты сбываются и во всех сферах деятельности всё получается. Пусть каждый день приносит радость и счастье, и грустные дни проходят мимо, а все самое доброе остается с тобой."
 
+    }
+    
+    func setupTextField() {
+        surnameTextField.setupPlaceholder(text: "Фамилия")
+        nameTextField.setupPlaceholder(text: "Имя")
+        middleNameTextField.setupPlaceholder(text: "Отчество")
+        celebrationTextField.setupPlaceholder(text: "Праздник")
     }
     
     func setupConstraints() {
